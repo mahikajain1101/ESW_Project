@@ -1,0 +1,36 @@
+<HTML>
+    <HEAD>
+        <TITLE>Dashboard - Team 33</TITLE>
+        <link rel="stylesheet" href="static\stylesheet.css">
+    </HEAD>
+    <BODY>
+        <H1 class = "center">Appliance Energy Monitoring</H1>
+        <p align="center" class="sensor">Live Sensor Data</p>
+        <p class="para" align="center"><iframe class="graph" src="https://thingspeak.com/channels/1921492/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=150&type=line&xaxis=Time&yaxis=Current"></iframe></p>
+        <br>
+
+
+
+        <h1>Predicting the state of the latest power consumed by Washing Machine </h1>
+        <h2>Last Current value = {{ curr }} </h2>
+        <div id="res" class="result" align="center">
+            <script>
+                var check = '{{ curr }}';
+                if(check >= 2){
+                    document.getElementById("res").innerHTML = "WASH / SPIN: HIGH POWER MODE"
+                }
+                else if(check <= 1){
+                    document.getElementById("res").innerHTML = "NOT IN USE / DRAIN: LOW POWER MODE"
+                }
+                else{
+                    document.getElementById("res").innerHTML = "RINSE"
+                }
+            </script>
+            <!-- {% if result %}
+                <H3>Predicted State:</H3>
+                    <p>Current Value - {{ curr }} MODE 0</p> -->
+                   <!-- <p>LOW POWER MODE</p> -->
+            <!-- {% endif %} --> 
+        </div>
+    </BODY>
+</HTML>

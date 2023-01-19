@@ -1,0 +1,43 @@
+.center{
+    padding-top: 30px;
+    text-align: center;
+    font-family: "Monospace", Monaco;
+}
+body{
+    background-color: black;
+}
+p{
+    font-size: x-large;
+    color: white;
+}
+H3{
+    font-size: xx-large;
+    color: white;
+}
+H1{
+    color: white;
+    text-align: center;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+.para{
+    padding-top: 20px;
+}
+
+.sensor{
+    padding-top: 20px;
+    font-family: "Monospace", Monaco;
+}
+
+.result{
+    color: #cccccc;
+    font-size: x-large;
+}
+
+.graph{
+    width: 450px;
+    height: 260px;
+    border: 1px solid #cccccc;
+}
